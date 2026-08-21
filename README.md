@@ -3,6 +3,8 @@
 Directory statica di eventi tecnologici ricorrenti in Italia, pronta per
 GitHub Pages. Non usa framework, dipendenze, database o build.
 
+Si tratta di un progetto che nasce da una esigenza personale.
+
 ## Come funziona
 
 - [`data/events.js`](data/events.js) contiene tutti gli eventi.
