@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Eventi italiani ricorrenti su software, Linux, cybersecurity, maker, hardware, IIoT e radio."
+  >
+  <title>Eventi Nerd</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/events.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div>
+        <h1>Eventi Nerd</h1>
+        <p>Siti ufficiali di eventi ricorrenti in Italia.</p>
+      </div>
+      <a id="suggest-link" class="suggest-link" href="CONTRIBUTING.md">
+        Segnala evento
+      </a>
+    </header>
+
+    <main>
+      <section class="filter-shell" aria-label="Cerca e filtra">
+        <div class="controls">
+          <label class="search-field">
+            <span class="sr-only">Cerca</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Cerca evento, città o tema"
+              autocomplete="off"
+            >
+          </label>
+
+          <label>
+            <span class="sr-only">Mese</span>
+            <select id="month" aria-label="Filtra per mese">
+              <option value="">Mese</option>
+              <option value="1">Gennaio</option>
+              <option value="2">Febbraio</option>
+              <option value="3">Marzo</option>
+              <option value="4">Aprile</option>
+              <option value="5">Maggio</option>
+              <option value="6">Giugno</option>
+              <option value="7">Luglio</option>
+              <option value="8">Agosto</option>
+              <option value="9">Settembre</option>
+              <option value="10">Ottobre</option>
+              <option value="11">Novembre</option>
+              <option value="12">Dicembre</option>
+              <option value="variable">Periodo variabile</option>
+            </select>
+          </label>
+
+          <label>
+            <span class="sr-only">Regione</span>
+            <select id="region" aria-label="Filtra per regione">
+              <option value="">Regione</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="result-bar">
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+          <button id="reset" type="button" hidden>Rimuovi filtri</button>
+        </div>
+      </section>
+
+      <section id="event-list" class="event-list" aria-label="Eventi"></section>
+    </main>
+
+    <footer>
+      <span>Date e sedi possono cambiare.</span>
+      <a href="docs/event-research.md">Fonti e criteri</a>
+    </footer>
+  </div>
+</body>
+</html>
