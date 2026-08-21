@@ -1,9 +1,9 @@
 # Eventi Nerd
 
-Directory statica di eventi tecnologici ricorrenti in Italia, pronta per
-GitHub Pages. Non usa framework, dipendenze, database o build.
-
+Directory statica di eventi tecnologici ricorrenti in Italia.
 Si tratta di un progetto che nasce da una esigenza personale.
+
+[Accedi alla pagina](https://samsan.github.io/eventinerd/)
 
 ## Come funziona
 
