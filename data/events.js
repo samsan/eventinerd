@@ -378,5 +378,239 @@ window.EVENTS = [
     months: [5, 6],
     period: "Tra maggio e giugno",
     tags: ["hacker culture", "diritti digitali", "community", "privacy"]
+  },
+  {
+    name: "Coderful",
+    url: "https://coderful.io/",
+    description: "Conferenza su Frontend, Backend, AI Application e Software Architecture.",
+    location: "Catania (CT)",
+    region: "Sicilia",
+    months: [1, 6],
+    period: "Giugno / Gennaio",
+    tags: ["frontend", "backend", "AI", "software architecture"]
+  },
+  {
+    name: "Italian C++ Conference / C++ Day",
+    url: "https://italiancpp.org/",
+    description: "Evento incentrato sul linguaggio C++, High Performance Computing e architetture di sistema.",
+    location: "Roma (RM) / Pavia (PV)",
+    region: "Sede variabile",
+    regions: ["Lazio", "Lombardia"],
+    months: [6, 10],
+    period: "Giugno / Ottobre",
+    tags: ["C++", "HPC", "system architecture", "performance"]
+  },
+  {
+    name: "RustLab",
+    url: "https://rustlab.it/",
+    description: "Conferenza internazionale sul linguaggio Rust, memory safety e programmazione di sistema.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [11],
+    period: "Di solito in novembre",
+    tags: ["Rust", "memory safety", "systems programming"]
+  },
+  {
+    name: "jsday",
+    url: "https://jsday.it/",
+    description: "Conferenza annuale focalizzata su JavaScript, Node.js, V8 Engine e Fullstack Web Engineering.",
+    location: "Verona (VR)",
+    region: "Veneto",
+    months: [4],
+    period: "Di solito in aprile",
+    tags: ["JavaScript", "Node.js", "V8", "web development"]
+  },
+  {
+    name: "reactjsday",
+    url: "https://grusp.org/",
+    description: "Conferenza dedicata all'ecosistema React, React Native, State Management e UI Engineering.",
+    location: "Verona (VR)",
+    region: "Veneto",
+    months: [11],
+    period: "Di solito in novembre",
+    tags: ["React", "React Native", "frontend", "UI"]
+  },
+  {
+    name: "angularday",
+    url: "https://grusp.org/",
+    description: "Conferenza sull'Angular Framework, TypeScript, Web Components e applicazioni enterprise.",
+    location: "Verona (VR)",
+    region: "Veneto",
+    months: [11],
+    period: "Di solito in novembre",
+    tags: ["Angular", "TypeScript", "web components", "frontend"]
+  },
+  {
+    name: "laravelday",
+    url: "https://grusp.org/",
+    description: "Evento sull'ecosistema Laravel, PHP, API Design ed ORM.",
+    location: "Verona (VR)",
+    region: "Veneto",
+    months: [11],
+    period: "Di solito in novembre",
+    tags: ["Laravel", "PHP", "API", "web development"]
+  },
+  {
+    name: "WordCamp Italia / Pisa",
+    url: "https://dev.events",
+    description: "Conferenza sull'ecosistema WordPress, PHP, accessibilità, web development e architettura CMS.",
+    location: "Pisa (PI) / Itinerante",
+    region: "Toscana",
+    months: [11],
+    period: "Di solito in novembre",
+    tags: ["WordPress", "PHP", "web development", "CMS"]
+  },
+  {
+    name: "No Hat",
+    url: "https://nohat.it/",
+    description: "Conferenza di sicurezza informatica su Offensive Security, Vulnerability Research, Privacy e Crittografia.",
+    location: "Bergamo (BG)",
+    region: "Lombardia",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["cybersecurity", "offensive security", "vulnerability research", "privacy"]
+  },
+  {
+    name: "Security Summit",
+    url: "https://securitysummit.it/",
+    description: "Summit pluri-tappa su Cyber Risk, Regulatory Compliance, Enterprise Defense e Threat Intelligence.",
+    location: "Napoli / Roma / Milano",
+    region: "Sede variabile",
+    regions: ["Campania", "Lazio", "Lombardia"],
+    months: [5, 6, 10],
+    period: "Maggio (NA) / Giugno (RM) / Autunno (MI)",
+    tags: ["cybersecurity", "cyber risk", "compliance", "threat intelligence"]
+  },
+  {
+    name: "CyberChallenge.IT",
+    url: "https://cyberchallenge.it/",
+    description: "Programma e competizione nazionale per giovani talenti su Ethical Hacking, Capture The Flag (CTF) e Crittografia.",
+    location: "Torino (TO) / Nazionale",
+    region: "Piemonte",
+    months: [7],
+    period: "Finale in luglio",
+    tags: ["cybersecurity", "CTF", "ethical hacking", "cryptography"]
+  },
+  {
+    name: "DevSecOpsDay",
+    url: "https://devsecopsday.it/",
+    description: "Evento focalizzato sulla sicurezza della Pipeline CI/CD, Container Security e Cloud Security.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["DevSecOps", "CI/CD", "container security", "cloud security"]
+  },
+  {
+    name: "Innovation Cybersecurity Summit",
+    url: "https://cybersecitalysummit.it/",
+    description: "Summit dedicato a Governance della sicurezza, Zero Trust e sicurezza delle infrastrutture critiche.",
+    location: "Roma (RM)",
+    region: "Lazio",
+    months: [4],
+    period: "Di solito in aprile",
+    tags: ["cybersecurity", "governance", "zero trust", "infrastrutture critiche"]
+  },
+  {
+    name: "Incontro DevOps Italia (IDI)",
+    url: "https://incontrodevops.it/",
+    description: "Conferenza annuale su DevOps, CI/CD, Infrastructure as Code, Cloud Native e Automazione.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [3],
+    period: "Di solito in marzo",
+    tags: ["DevOps", "CI/CD", "IaC", "cloud native", "automation"]
+  },
+  {
+    name: "ContainerDay",
+    url: "https://containerday.it/",
+    description: "Conferenza dedicata a Docker, Kubernetes, Service Mesh e orchestrazione microservizi.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["Docker", "Kubernetes", "microservices", "container"]
+  },
+  {
+    name: "MLOpsDay",
+    url: "https://mlopsday.it/",
+    description: "Evento su MLOps, infrastruttura AI, Model Deployment e orchestrazione GPU.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["MLOps", "AI infrastructure", "model deployment", "GPU"]
+  },
+  {
+    name: "AWS Community Day Italy",
+    url: "https://dev.events",
+    description: "Conferenza community su architettura Cloud, servizi AWS, Serverless e sistemi distribuiti.",
+    location: "Roma (RM) / Milano (MI)",
+    region: "Sede variabile",
+    regions: ["Lazio", "Lombardia"],
+    months: [9],
+    period: "Di solito in settembre",
+    tags: ["AWS", "cloud architecture", "serverless", "distributed systems"]
+  },
+  {
+    name: "ServerlessDays Milano",
+    url: "https://dev.events",
+    description: "Conferenza verticale su architetture Serverless, Event-driven Computing e Cloud Native.",
+    location: "Milano (MI)",
+    region: "Lombardia",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["serverless", "cloud native", "event-driven", "software architecture"]
+  },
+  {
+    name: "Global Azure Italy",
+    url: "https://aspitalia.com/",
+    description: "Evento community su Microsoft Azure, Cloud Computing, Edge Infrastructure e DevOps.",
+    location: "Milano (MI) / Online",
+    region: "Lombardia",
+    months: [4],
+    period: "Di solito in aprile",
+    tags: ["Azure", "cloud", "DevOps", "Microsoft"]
+  },
+  {
+    name: "DevConf",
+    url: "https://devconf.it/",
+    description: "Evento biennale su Open Source Development, Etica del Codice e progetti Linux territoriali.",
+    location: "Pavia (PV) / Itinerante",
+    region: "Lombardia",
+    months: [7],
+    period: "Biennale, di solito in luglio",
+    tags: ["open source", "ethics", "linux", "software development"]
+  },
+  {
+    name: "End Summer Camp (ESC)",
+    url: "https://endsummer.camp",
+    description: "Raduno estivo hacker e maker dedicato a DIY hardware, Reverse Engineering, Free Software e Mesh Nets.",
+    location: "Venezia / Treviso (VE/TV)",
+    region: "Veneto",
+    months: [9],
+    period: "Fine estate / Settembre",
+    tags: ["hacking", "hardware DIY", "reverse engineering", "free software", "mesh"]
+  },
+  {
+    name: "Fiera dell'Elettronica e del Radioamatore (Montichiari)",
+    url: "https://centrofiera.it/",
+    description: "Fiera semestrale dedicata a componentistica elettronica, radioamatorialità, microcontrollori e hardware.",
+    location: "Montichiari (BS)",
+    region: "Lombardia",
+    months: [3, 9],
+    period: "Semestrale (Marzo & Settembre)",
+    tags: ["elettronica", "radioamatori", "microcontrollori", "hardware"]
+  },
+  {
+    name: "Italian Agile Days (IAD)",
+    url: "https://agileday.it/",
+    description: "Convegno nazionale sulle Metodologie Agili, Lean Software, Scrum ed Extreme Programming (XP).",
+    location: "Sede itinerante",
+    region: "Sede variabile",
+    regions: ["Lombardia", "Calabria"],
+    months: [10, 11],
+    period: "Tra ottobre e novembre",
+    tags: ["agile", "lean", "scrum", "extreme programming"]
   }
 ];
