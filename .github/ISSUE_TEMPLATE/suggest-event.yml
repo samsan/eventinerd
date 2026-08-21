@@ -1,0 +1,99 @@
+name: Segnala o correggi un evento
+description: Proponi una serie ricorrente o una correzione alla directory.
+title: "[Evento]: "
+body:
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Tipo di segnalazione
+      options:
+        - Nuovo evento
+        - Correzione di un evento esistente
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Nome dell'evento
+      placeholder: Linux Day Trieste
+    validations:
+      required: true
+
+  - type: input
+    id: official-url
+    attributes:
+      label: Sito ufficiale
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: recurrence
+    attributes:
+      label: Prova della ricorrenza
+      description: Linka almeno due edizioni, un archivio o una dichiarazione ufficiale.
+      placeholder: Edizione 2025..., archivio...
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Luogo
+      placeholder: Trieste (TS) oppure sede variabile
+    validations:
+      required: true
+
+  - type: dropdown
+    id: region
+    attributes:
+      label: Regione
+      options:
+        - Abruzzo
+        - Basilicata
+        - Calabria
+        - Campania
+        - Emilia-Romagna
+        - Friuli-Venezia Giulia
+        - Lazio
+        - Liguria
+        - Lombardia
+        - Marche
+        - Molise
+        - Piemonte
+        - Puglia
+        - Sardegna
+        - Sicilia
+        - Toscana
+        - Trentino-Alto Adige
+        - Umbria
+        - Valle d'Aosta
+        - Veneto
+        - Più regioni o sede variabile
+    validations:
+      required: true
+
+  - type: input
+    id: period
+    attributes:
+      label: Periodo abituale
+      placeholder: Ottobre, quarto sabato
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Temi
+      placeholder: Linux, open source, cybersecurity, maker
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione o correzione
+      description: Poche righe, senza testo promozionale.
+    validations:
+      required: true
