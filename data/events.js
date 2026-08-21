@@ -422,7 +422,7 @@ window.EVENTS = [
   },
   {
     name: "reactjsday",
-    url: "https://grusp.org/",
+    url: "https://www.reactjsday.it/",
     description: "Conferenza dedicata all'ecosistema React, React Native, State Management e UI Engineering.",
     location: "Verona (VR)",
     region: "Veneto",
@@ -432,7 +432,7 @@ window.EVENTS = [
   },
   {
     name: "angularday",
-    url: "https://grusp.org/",
+    url: "https://www.angularday.it/",
     description: "Conferenza sull'Angular Framework, TypeScript, Web Components e applicazioni enterprise.",
     location: "Verona (VR)",
     region: "Veneto",
@@ -442,7 +442,7 @@ window.EVENTS = [
   },
   {
     name: "laravelday",
-    url: "https://grusp.org/",
+    url: "https://www.laravelday.it/",
     description: "Evento sull'ecosistema Laravel, PHP, API Design ed ORM.",
     location: "Verona (VR)",
     region: "Veneto",
