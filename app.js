@@ -117,10 +117,30 @@
 
     eventList.replaceChildren(...filteredEvents.map(createCard));
 
-    if (filteredEvents.length === 0) {
-      eventList.append(
-        createElement("p", "empty", "Nessun evento con questi filtri.")
+    if (filteredEvents.length === 0 && /^\d+$/.test(month)) {
+      const emptyState = createElement("p", "empty", "Nessun evento con questi filtri.");
+      const currentMonth = Number(month);
+
+      const monthLink = (offset) => {
+        const targetMonth = ((currentMonth - 1 + offset + 12) % 12) + 1;
+        const link = createElement("a", "", `'${monthSelect.options[targetMonth].text}'`);
+        link.href = "#";
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          monthSelect.value = targetMonth;
+          render();
+        });
+        return link;
+      };
+
+      emptyState.append(
+        document.createElement("br"),
+        "Prova con ",
+        monthLink(-1),
+        " oppure ",
+        monthLink(1)
       );
+      eventList.append(emptyState);
     }
 
     const hasFilters = searchInput.value || month || region;
@@ -148,6 +168,8 @@
       `https://github.com/${owner}/${repository}/issues/new` +
       "?template=suggest-event.yml";
   }
+
+  monthSelect.value = String(new Date().getMonth() + 1);
 
   searchInput.addEventListener("input", render);
   monthSelect.addEventListener("change", render);
