@@ -1,6 +1,6 @@
 # Eventi Nerd
 
-Directory statica di eventi tecnologici ricorrenti in Italia.
+Directory statica di eventi ricorrenti in Italia: IT, Elettronica, Making, Cultura Digitale.
 Si tratta di un progetto che nasce da una esigenza personale: trovare eventi interessanti dove conoscere persone appassionate ed aumentare le competenze personali, anche in campi mai esplorati.
 
 [Accedi alla pagina](https://samsan.github.io/eventinerd/)
