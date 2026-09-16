@@ -1,16 +1,24 @@
 (() => {
   "use strict";
 
-  const northEastRegions = new Set([
-    "Emilia-Romagna",
-    "Friuli-Venezia Giulia",
-    "Trentino-Alto Adige",
-    "Veneto"
-  ]);
-
   const events = [...window.EVENTS].sort((left, right) =>
     left.name.localeCompare(right.name, "it")
   );
+
+  const monthLabels = [
+    "GEN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAG",
+    "GIU",
+    "LUG",
+    "AGO",
+    "SET",
+    "OTT",
+    "NOV",
+    "DIC"
+  ];
 
   const searchInput = document.querySelector("#search");
   const monthSelect = document.querySelector("#month");
@@ -27,6 +35,15 @@
       .replace(/[\u0300-\u036f]/g, "");
 
   const getRegions = (event) => event.regions ?? [event.region];
+  const formatMonths = (months) =>
+    months.length
+      ? months.map((month) => monthLabels[month - 1]).join("\n")
+      : "VAR";
+  const formatLocation = (location) =>
+    location
+      .replace(/\s*\([^)]*\)/g, "")
+      .replace(/\s*\/\s*/g, "\n")
+      .trim();
 
   const createElement = (tag, className, text) => {
     const element = document.createElement(tag);
@@ -39,11 +56,14 @@
     return element;
   };
 
-  const createFact = (label, value) => {
-    const fact = createElement("div", "fact");
+  const createFact = (label, value, displayValue, modifier) => {
+    const fact = createElement("div", `fact fact--${modifier}`);
+    const detail = createElement("dd", "", displayValue);
+    detail.title = value;
+    detail.setAttribute("aria-label", value);
     fact.append(
-      createElement("dt", "", label),
-      createElement("dd", "", value)
+      createElement("dt", "sr-only", label),
+      detail
     );
     return fact;
   };
@@ -51,10 +71,6 @@
   const createCard = (event) => {
     const header = createElement("div", "card-header");
     header.append(createElement("span", "region", event.region));
-
-    if (northEastRegions.has(event.region)) {
-      header.append(createElement("span", "north-east", "Nord Est"));
-    }
 
     const link = createElement("a", "", `${event.name} ↗`);
     link.href = event.url;
@@ -67,22 +83,22 @@
     const tags = createElement("ul", "tags");
     event.tags.forEach((tag) => tags.append(createElement("li", "", tag)));
 
-    const content = createElement("div", "event-content");
-    content.append(
-      header,
-      title,
-      createElement("p", "description", event.description),
-      tags
-    );
+    const heading = createElement("div", "event-heading");
+    heading.append(header, title);
 
     const facts = createElement("dl", "facts");
     facts.append(
-      createFact("Periodo", event.period),
-      createFact("Dove", event.location)
+      createFact("Periodo", event.period, formatMonths(event.months), "period"),
+      createFact("Dove", event.location, formatLocation(event.location), "location")
     );
 
     const card = createElement("article", "event-card");
-    card.append(content, facts);
+    card.append(
+      facts,
+      heading,
+      createElement("p", "description", event.description),
+      tags
+    );
     return card;
   };
 
