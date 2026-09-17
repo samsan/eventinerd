@@ -167,30 +167,34 @@ a:focus-visible {
 .event-list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 8px;
-}
-
-.event-card {
-  display: grid;
-  grid-template-areas:
-    "facts heading"
-    "facts description"
-    "facts tags";
-  grid-template-columns: 166px minmax(0, 1fr);
-  grid-template-rows: auto auto 1fr;
-  column-gap: 18px;
-  row-gap: 4px;
-  min-width: 0;
   overflow: hidden;
-  padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
 }
 
+.event-card {
+  display: grid;
+  grid-template-areas:
+    "heading meta"
+    "description description"
+    "tags tags";
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 24px;
+  row-gap: 4px;
+  min-width: 0;
+  padding: 13px 16px;
+  background: var(--surface);
+  transition: background-color 160ms ease;
+}
+
+.event-card + .event-card {
+  border-top: 1px solid var(--line);
+}
+
 .event-card:hover,
 .event-card:focus-within {
-  border-color: #b7c3bd;
+  background: #fafbfa;
 }
 
 .event-heading {
@@ -198,25 +202,12 @@ a:focus-visible {
   min-width: 0;
 }
 
-.card-header {
-  margin-bottom: 4px;
-}
-
-.region {
-  display: block;
-  overflow: hidden;
-  color: var(--brand);
-  font-size: 0.67rem;
-  font-weight: 800;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .event-card h2 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.02rem;
   letter-spacing: -0.025em;
   line-height: 1.2;
+  text-wrap: pretty;
 }
 
 .event-card h2 a {
@@ -232,6 +223,7 @@ a:focus-visible {
   grid-area: description;
   display: -webkit-box;
   overflow: hidden;
+  max-width: 84ch;
   margin: 0;
   color: #424946;
   font-size: 0.8rem;
@@ -244,68 +236,77 @@ a:focus-visible {
   grid-area: tags;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
-  align-self: end;
+  gap: 0;
   margin: 2px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .tags li {
-  padding: 2px 6px;
-  border-radius: 999px;
-  background: #f0f2f0;
-  color: #525a56;
+  display: flex;
+  align-items: center;
+  color: var(--muted);
   font-size: 0.62rem;
+  font-weight: 600;
 }
 
-.facts {
-  display: grid;
-  grid-area: facts;
-  grid-template-columns: repeat(2, 80px);
-  align-self: start;
-  gap: 6px;
+.tags li + li::before {
+  width: 1px;
+  height: 0.7rem;
+  margin: 0 7px;
+  background: var(--line-strong);
+  content: "";
+}
+
+.event-meta {
+  display: flex;
+  grid-area: meta;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
   margin: 0;
   padding: 0;
 }
 
-.fact {
-  display: grid;
-  width: 80px;
-  aspect-ratio: 1;
-  place-items: center;
-  overflow: hidden;
-  padding: 8px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--background);
-  text-align: center;
+.meta-item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
 }
 
-.fact dd {
-  display: -webkit-box;
+.meta-item + .meta-item::before {
+  width: 1px;
+  height: 0.9rem;
+  margin: 0 10px;
+  background: var(--line-strong);
+  content: "";
+}
+
+.meta-item dd {
   overflow: hidden;
   margin: 0;
-  font-size: 0.65rem;
-  font-weight: 700;
-  line-height: 1.15;
-  overflow-wrap: anywhere;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.fact--period dd {
+.meta-item--month dd {
   color: var(--brand);
-  font-size: 1rem;
+  font-size: 0.73rem;
   font-weight: 850;
   letter-spacing: 0.04em;
-  line-height: 0.95;
-  white-space: pre-line;
+  font-variant-numeric: tabular-nums;
 }
 
-.fact--location dd {
-  font-size: 0.69rem;
-  white-space: pre-line;
+.meta-item--region dd {
+  color: var(--text);
+}
+
+.meta-item--location dd {
+  max-width: 18rem;
+  color: var(--muted);
 }
 
 .empty {
@@ -346,6 +347,28 @@ footer a {
     grid-column: 1 / -1;
   }
 
+  .event-card {
+    grid-template-areas:
+      "heading"
+      "meta"
+      "description"
+      "tags";
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: 5px;
+  }
+
+  .event-meta {
+    justify-content: flex-start;
+  }
+
+  .meta-item--location {
+    min-width: 0;
+  }
+
+  .meta-item--location dd {
+    max-width: 44vw;
+  }
 }
 
 @media (max-width: 480px) {
@@ -370,46 +393,26 @@ footer a {
   }
 
   .event-card {
-    grid-template-areas:
-      "facts heading"
-      "description description"
-      "tags tags";
-    grid-template-columns: 130px minmax(0, 1fr);
-    grid-template-rows: auto auto auto;
-    column-gap: 12px;
-    row-gap: 6px;
-    padding: 10px;
-  }
-
-  .facts {
-    grid-template-columns: repeat(2, 62px);
-    gap: 6px;
-  }
-
-  .fact {
-    width: 62px;
-    padding: 6px;
-  }
-
-  .fact dd {
-    font-size: 0.56rem;
-    -webkit-line-clamp: 5;
-  }
-
-  .fact--period dd {
-    font-size: 0.78rem;
-    line-height: 0.95;
-  }
-
-  .fact--location dd {
-    font-size: 0.56rem;
-  }
-
-  .fact--location {
-    padding: 4px;
+    padding: 12px;
   }
 
   .event-card h2 {
-    font-size: 0.94rem;
+    font-size: 0.98rem;
+  }
+
+  .meta-item + .meta-item::before {
+    margin: 0 7px;
+  }
+
+  .meta-item dd {
+    font-size: 0.68rem;
+  }
+
+  .meta-item--month dd {
+    font-size: 0.69rem;
+  }
+
+  .meta-item--location dd {
+    max-width: 42vw;
   }
 }

@@ -1,9 +1,7 @@
 (() => {
   "use strict";
 
-  const events = [...window.EVENTS].sort((left, right) =>
-    left.name.localeCompare(right.name, "it")
-  );
+  const events = [...window.EVENTS];
 
   const monthLabels = [
     "GEN",
@@ -35,15 +33,15 @@
       .replace(/[\u0300-\u036f]/g, "");
 
   const getRegions = (event) => event.regions ?? [event.region];
+  const compareByName = (left, right) =>
+    left.name.localeCompare(right.name, "it");
+  const compareByMonthDescending = (left, right) =>
+    Math.max(0, ...right.months) - Math.max(0, ...left.months) ||
+    compareByName(left, right);
   const formatMonths = (months) =>
     months.length
-      ? months.map((month) => monthLabels[month - 1]).join("\n")
+      ? months.map((month) => monthLabels[month - 1]).join(" / ")
       : "VAR";
-  const formatLocation = (location) =>
-    location
-      .replace(/\s*\([^)]*\)/g, "")
-      .replace(/\s*\/\s*/g, "\n")
-      .trim();
 
   const createElement = (tag, className, text) => {
     const element = document.createElement(tag);
@@ -56,46 +54,49 @@
     return element;
   };
 
-  const createFact = (label, value, displayValue, modifier) => {
-    const fact = createElement("div", `fact fact--${modifier}`);
+  const createMetaItem = (label, value, displayValue, modifier) => {
+    const item = createElement("div", `meta-item meta-item--${modifier}`);
     const detail = createElement("dd", "", displayValue);
     detail.title = value;
     detail.setAttribute("aria-label", value);
-    fact.append(
+    item.append(
       createElement("dt", "sr-only", label),
       detail
     );
-    return fact;
+    return item;
   };
 
   const createCard = (event) => {
-    const header = createElement("div", "card-header");
-    header.append(createElement("span", "region", event.region));
-
     const link = createElement("a", "", `${event.name} ↗`);
     link.href = event.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
+    link.setAttribute(
+      "aria-label",
+      `${event.name}, apre il sito ufficiale in una nuova scheda`
+    );
 
     const title = createElement("h2");
     title.append(link);
 
     const tags = createElement("ul", "tags");
+    tags.setAttribute("aria-label", "Temi");
     event.tags.forEach((tag) => tags.append(createElement("li", "", tag)));
 
     const heading = createElement("div", "event-heading");
-    heading.append(header, title);
+    heading.append(title);
 
-    const facts = createElement("dl", "facts");
-    facts.append(
-      createFact("Periodo", event.period, formatMonths(event.months), "period"),
-      createFact("Dove", event.location, formatLocation(event.location), "location")
+    const meta = createElement("dl", "event-meta");
+    meta.append(
+      createMetaItem("Periodo", event.period, formatMonths(event.months), "month"),
+      createMetaItem("Regione", event.region, event.region, "region"),
+      createMetaItem("Luogo", event.location, event.location, "location")
     );
 
     const card = createElement("article", "event-card");
     card.append(
-      facts,
       heading,
+      meta,
       createElement("p", "description", event.description),
       tags
     );
@@ -127,9 +128,9 @@
     const query = normalize(searchInput.value.trim());
     const month = monthSelect.value;
     const region = regionSelect.value;
-    const filteredEvents = events.filter((event) =>
-      matchesFilters(event, query, month, region)
-    );
+    const filteredEvents = events
+      .filter((event) => matchesFilters(event, query, month, region))
+      .sort(month ? compareByName : compareByMonthDescending);
 
     eventList.replaceChildren(...filteredEvents.map(createCard));
 

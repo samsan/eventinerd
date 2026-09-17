@@ -65,12 +65,12 @@ window.EVENTS = [
   {
     name: "Radioamatore Tech Expo",
     url: "https://www.radioamatorepordenone.it/",
-    description: "Grande fiera storica di radioamatorismo, elettronica e informatica con Linux Arena, maker e mercato dell'usato.",
+    description: "Fiera dedicata a radioamatori, elettronica, telecomunicazioni, informatica, componenti e sperimentazione.",
     location: "Pordenone (PN)",
     region: "Friuli-Venezia Giulia",
     months: [4],
-    period: "Di solito in aprile",
-    tags: ["radioamatori", "elettronica", "Linux", "maker"]
+    period: "Aprile",
+    tags: ["radioamatori", "elettronica", "telecomunicazioni"]
   },
   {
     name: "Radioamatore 2",
@@ -103,14 +103,14 @@ window.EVENTS = [
     tags: ["elettronica", "radioamatori", "componenti", "hardware"]
   },
   {
-    name: "phpDay",
+    name: "phpday",
     url: "https://www.phpday.it/",
-    description: "Conferenza internazionale della community PHP organizzata da GrUSP, con talk tecnici in inglese.",
+    description: "Conferenza internazionale in Italia dedicata a PHP, sviluppo backend, framework e architetture web.",
     location: "Verona (VR)",
     region: "Veneto",
     months: [5],
-    period: "Di solito in maggio",
-    tags: ["PHP", "web", "software development", "community"]
+    period: "Maggio",
+    tags: ["PHP", "web development", "software architecture"]
   },
   {
     name: "GDG DevFest Venezia",
@@ -135,74 +135,74 @@ window.EVENTS = [
   {
     name: "Linux Day",
     url: "https://www.linuxday.it/",
-    description: "La rete nazionale di eventi locali dedicati a Linux e al software libero; il sito ufficiale pubblica ogni anno la mappa delle sedi.",
+    description: "Manifestazione nazionale diffusa dedicata a GNU/Linux, software libero, open source e cultura digitale.",
     location: "Sedi locali in tutta Italia",
     region: "Tutta Italia",
     regions: allItalianRegions,
     months: [10],
     period: "Quarto sabato di ottobre",
-    tags: ["Linux", "open source", "software libero", "community"]
+    tags: ["Linux", "software libero", "open source"]
   },
   {
-    name: "Open Source Day / OSDAY",
+    name: "Open Source Day",
     url: "https://osday.dev/",
-    description: "Conferenza gratuita e ibrida dedicata all'open source, organizzata dalla community Schrödinger Hat.",
+    description: "Conferenza community-driven su software open source, sviluppo, infrastrutture, sicurezza e sostenibilità tecnologica.",
     location: "Firenze (FI)",
     region: "Toscana",
-    months: [3, 4],
-    period: "Tra marzo e aprile",
-    tags: ["open source", "software development", "community"]
+    months: [4],
+    period: "Aprile",
+    tags: ["open source", "Linux", "cloud", "cybersecurity"]
   },
   {
     name: "ITASEC",
     url: "https://itasec.it/",
-    description: "Conferenza nazionale di ricerca e innovazione sulla cybersecurity, organizzata dal CINI e da Fondazione SERICS.",
+    description: "Conferenza nazionale sulla cybersecurity che riunisce ricerca, università, industria e istituzioni.",
     location: "Sede italiana variabile",
     region: "Sede variabile",
-    regions: ["Emilia-Romagna", "Sardegna"],
-    months: [2],
-    period: "Di solito in febbraio",
-    tags: ["cybersecurity", "ricerca", "accademia", "policy"]
+    regions: ["Lazio", "Lombardia", "Piemonte", "Sardegna", "Toscana"],
+    months: [2, 4],
+    period: "Febbraio-aprile",
+    tags: ["cybersecurity", "security research", "università"]
   },
   {
     name: "HackInBo",
     url: "https://www.hackinbo.it/",
-    description: "Conferenza gratuita di sicurezza informatica con due edizioni annuali, una primaverile e una invernale.",
+    description: "Conferenza italiana sulla sicurezza informatica con sessioni tecniche, dimostrazioni e confronto professionale.",
     location: "Bologna (BO)",
     region: "Emilia-Romagna",
-    months: [6, 11],
-    period: "Edizioni in giugno e novembre",
-    tags: ["cybersecurity", "hacking", "IT security", "community"]
+    months: [5, 11],
+    period: "Primavera e autunno",
+    tags: ["cybersecurity", "hacking", "security research"]
   },
   {
     name: "RomHack",
     url: "https://romhack.io/",
-    description: "Conferenza internazionale no-profit di cybersecurity con sessioni tecniche, training e community.",
+    description: "Conferenza e training camp sulla sicurezza informatica, con contenuti tecnici e attività community-driven.",
     location: "Roma (RM)",
     region: "Lazio",
     months: [9],
-    period: "Ultimo sabato di settembre",
-    tags: ["cybersecurity", "hacking", "training", "community"]
+    period: "Settembre",
+    tags: ["cybersecurity", "hacking", "security research"]
   },
   {
     name: "Cybertech Europe",
     url: "https://italy.cybertechconference.com/",
-    description: "Evento internazionale su cybersecurity, industria e tecnologie della difesa con conferenza ed esposizione.",
+    description: "Conferenza ed esposizione europea su cybersecurity, tecnologie di difesa, infrastrutture e innovazione digitale.",
     location: "Roma (RM)",
     region: "Lazio",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["cybersecurity", "difesa", "industria", "expo"]
+    period: "Ottobre",
+    tags: ["cybersecurity", "infrastrutture", "digital technology"]
   },
   {
     name: "Maker Faire Rome",
-    url: "https://makerfairerome.eu/en/",
-    description: "Grande manifestazione europea per maker su Arduino, elettronica, IoT, robotica, fabbricazione digitale e sostenibilità.",
+    url: "https://makerfairerome.eu/",
+    description: "Fiera europea dell'innovazione con progetti maker, elettronica, robotica, fabbricazione digitale e IoT.",
     location: "Roma (RM)",
     region: "Lazio",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["maker", "Arduino", "IoT", "hardware", "robotica"]
+    period: "Ottobre",
+    tags: ["maker", "elettronica", "robotica", "IoT"]
   },
   {
     name: "Arduino Days",
@@ -288,14 +288,13 @@ window.EVENTS = [
   },
   {
     name: "PyCon Italia",
-    url: "https://www.pycon.it/",
-    description: "Conferenza annuale della community Python italiana con talk, workshop e sprint open source.",
-    location: "Sede italiana variabile",
-    region: "Sede variabile",
-    regions: ["Toscana", "Emilia-Romagna"],
-    months: [5],
-    period: "Di solito in maggio",
-    tags: ["Python", "open source", "software development", "community"]
+    url: "https://pycon.it/",
+    description: "Conferenza nazionale della comunità Python su linguaggio, sviluppo software, data science, AI e didattica.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
+    months: [5, 6],
+    period: "Maggio-giugno",
+    tags: ["Python", "software development", "data", "AI"]
   },
   {
     name: "GoLab",
@@ -308,14 +307,14 @@ window.EVENTS = [
     tags: ["Go", "software development", "community"]
   },
   {
-    name: "Codemotion Conference Milano",
-    url: "https://conferences.codemotion.com/",
-    description: "Grande conferenza autunnale per sviluppatori su cloud, AI, frontend, DevOps e architetture software.",
-    location: "Milano / Rho (MI)",
+    name: "Codemotion Milan",
+    url: "https://conferences.codemotion.com/milan/",
+    description: "Conferenza per sviluppatori su linguaggi, architetture software, cloud, AI, DevOps e tecnologie emergenti.",
+    location: "Milano (MI)",
     region: "Lombardia",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["software development", "cloud", "AI", "frontend"]
+    period: "Ottobre",
+    tags: ["software development", "cloud", "AI", "DevOps"]
   },
   {
     name: "Codemotion Conference Roma",
@@ -339,14 +338,15 @@ window.EVENTS = [
     tags: ["Android", "mobile", "Flutter", "software development"]
   },
   {
-    name: "SMAU Milano",
+    name: "SMAU",
     url: "https://www.smau.it/",
-    description: "Storica manifestazione B2B su innovazione digitale, startup e trasformazione tecnologica di imprese e PA.",
-    location: "Milano (MI)",
-    region: "Lombardia",
-    months: [10, 11],
-    period: "Tra ottobre e novembre",
-    tags: ["innovazione", "startup", "digitale", "imprese"]
+    description: "Serie italiana di eventi sull'innovazione digitale con startup, imprese, pubbliche amministrazioni e tecnologie.",
+    location: "Sedi italiane multiple",
+    region: "Sede variabile",
+    regions: ["Campania", "Lombardia", "Puglia"],
+    months: [3, 5, 10, 12],
+    period: "Più edizioni durante l'anno",
+    tags: ["innovazione digitale", "startup", "pubblica amministrazione"]
   },
   {
     name: "Internet Festival",
@@ -369,15 +369,15 @@ window.EVENTS = [
     tags: ["PA digitale", "smart city", "innovazione", "e-government"]
   },
   {
-    name: "Hackmeeting Italia",
-    url: "https://www.hackmeeting.org/",
-    description: "Incontro annuale autogestito delle controculture digitali italiane, con seminari e laboratori dal 1998.",
+    name: "Hackmeeting",
+    url: "https://hackmeeting.org/",
+    description: "Incontro autogestito e itinerante su hacking, software libero, privacy, reti e diritti digitali.",
     location: "Sede italiana variabile",
     region: "Sede variabile",
-    regions: ["Lombardia", "Sardegna"],
+    regions: ["Campania", "Emilia-Romagna", "Lombardia", "Piemonte", "Toscana", "Veneto"],
     months: [5, 6],
-    period: "Tra maggio e giugno",
-    tags: ["hacker culture", "diritti digitali", "community", "privacy"]
+    period: "Maggio-giugno",
+    tags: ["hacking", "software libero", "privacy", "cultura digitale"]
   },
   {
     name: "Coderful",
@@ -412,43 +412,43 @@ window.EVENTS = [
   },
   {
     name: "jsday",
-    url: "https://jsday.it/",
-    description: "Conferenza annuale focalizzata su JavaScript, Node.js, V8 Engine e Fullstack Web Engineering.",
-    location: "Verona (VR)",
-    region: "Veneto",
+    url: "https://www.jsday.it/",
+    description: "Conferenza internazionale in Italia dedicata a JavaScript, TypeScript, framework web e architetture frontend.",
+    location: "Bologna (BO)",
+    region: "Emilia-Romagna",
     months: [4],
-    period: "Di solito in aprile",
-    tags: ["JavaScript", "Node.js", "V8", "web development"]
+    period: "Aprile",
+    tags: ["JavaScript", "TypeScript", "web development"]
   },
   {
     name: "reactjsday",
     url: "https://www.reactjsday.it/",
-    description: "Conferenza dedicata all'ecosistema React, React Native, State Management e UI Engineering.",
+    description: "Conferenza italiana dedicata a React, React Native, frontend engineering, accessibilità e strumenti web.",
     location: "Verona (VR)",
     region: "Veneto",
     months: [11],
-    period: "Di solito in novembre",
-    tags: ["React", "React Native", "frontend", "UI"]
+    period: "Novembre",
+    tags: ["React", "JavaScript", "web development"]
   },
   {
     name: "angularday",
     url: "https://www.angularday.it/",
-    description: "Conferenza sull'Angular Framework, TypeScript, Web Components e applicazioni enterprise.",
+    description: "Conferenza tecnica della community italiana dedicata ad Angular, sviluppo frontend e architetture web.",
     location: "Verona (VR)",
     region: "Veneto",
     months: [11],
-    period: "Di solito in novembre",
-    tags: ["Angular", "TypeScript", "web components", "frontend"]
+    period: "Novembre",
+    tags: ["Angular", "web development", "JavaScript"]
   },
   {
     name: "laravelday",
     url: "https://www.laravelday.it/",
-    description: "Evento sull'ecosistema Laravel, PHP, API Design ed ORM.",
+    description: "Conferenza italiana dedicata a Laravel, PHP, sviluppo backend, testing e architetture applicative.",
     location: "Verona (VR)",
     region: "Veneto",
     months: [11],
-    period: "Di solito in novembre",
-    tags: ["Laravel", "PHP", "API", "web development"]
+    period: "Novembre",
+    tags: ["Laravel", "PHP", "web development"]
   },
   {
     name: "WordCamp Italia / Pisa",
@@ -462,13 +462,13 @@ window.EVENTS = [
   },
   {
     name: "No Hat",
-    url: "https://nohat.it/",
-    description: "Conferenza di sicurezza informatica su Offensive Security, Vulnerability Research, Privacy e Crittografia.",
+    url: "https://www.nohat.it/",
+    description: "Conferenza indipendente di sicurezza informatica orientata a ricerca tecnica, vulnerabilità e attacco.",
     location: "Bergamo (BG)",
     region: "Lombardia",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["cybersecurity", "offensive security", "vulnerability research", "privacy"]
+    period: "Ottobre",
+    tags: ["cybersecurity", "hacking", "security research"]
   },
   {
     name: "Security Summit",
@@ -492,14 +492,14 @@ window.EVENTS = [
     tags: ["cybersecurity", "CTF", "ethical hacking", "cryptography"]
   },
   {
-    name: "DevSecOpsDay",
-    url: "https://devsecopsday.it/",
-    description: "Evento focalizzato sulla sicurezza della Pipeline CI/CD, Container Security e Cloud Security.",
+    name: "devsecopsday",
+    url: "https://www.devsecopsday.it/",
+    description: "Conferenza tecnica sull'integrazione della sicurezza nei processi DevOps, nelle pipeline e nel ciclo software.",
     location: "Bologna (BO)",
     region: "Emilia-Romagna",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["DevSecOps", "CI/CD", "container security", "cloud security"]
+    period: "Ottobre",
+    tags: ["DevSecOps", "cybersecurity", "DevOps"]
   },
   {
     name: "Innovation Cybersecurity Summit",
@@ -512,24 +512,24 @@ window.EVENTS = [
     tags: ["cybersecurity", "governance", "zero trust", "infrastrutture critiche"]
   },
   {
-    name: "Incontro DevOps Italia (IDI)",
-    url: "https://incontrodevops.it/",
-    description: "Conferenza annuale su DevOps, CI/CD, Infrastructure as Code, Cloud Native e Automazione.",
+    name: "IDI - Incontro DevOps Italia",
+    url: "https://www.incontrodevops.it/",
+    description: "Conferenza italiana dedicata a DevOps, automazione, infrastrutture, affidabilità e collaborazione tra team.",
     location: "Bologna (BO)",
     region: "Emilia-Romagna",
     months: [3],
-    period: "Di solito in marzo",
-    tags: ["DevOps", "CI/CD", "IaC", "cloud native", "automation"]
+    period: "Marzo",
+    tags: ["DevOps", "cloud", "infrastrutture", "SRE"]
   },
   {
-    name: "ContainerDay",
-    url: "https://containerday.it/",
-    description: "Conferenza dedicata a Docker, Kubernetes, Service Mesh e orchestrazione microservizi.",
+    name: "containerday",
+    url: "https://www.containerday.it/",
+    description: "Conferenza tecnica su container, orchestrazione, Kubernetes, piattaforme cloud native e infrastrutture.",
     location: "Bologna (BO)",
     region: "Emilia-Romagna",
     months: [10],
-    period: "Di solito in ottobre",
-    tags: ["Docker", "Kubernetes", "microservices", "container"]
+    period: "Ottobre",
+    tags: ["container", "Kubernetes", "cloud native", "DevOps"]
   },
   {
     name: "MLOpsDay",
@@ -583,14 +583,14 @@ window.EVENTS = [
     tags: ["open source", "ethics", "linux", "software development"]
   },
   {
-    name: "End Summer Camp (ESC)",
-    url: "https://endsummer.camp",
-    description: "Raduno estivo hacker e maker dedicato a DIY hardware, Reverse Engineering, Free Software e Mesh Nets.",
-    location: "Venezia / Treviso (VE/TV)",
+    name: "End Summer Camp",
+    url: "https://endsummer.camp/",
+    description: "Hacker camp non profit con talk, laboratori e attività su sicurezza, privacy, reti e cultura digitale.",
+    location: "San Donà di Piave (VE)",
     region: "Veneto",
     months: [9],
-    period: "Fine estate / Settembre",
-    tags: ["hacking", "hardware DIY", "reverse engineering", "free software", "mesh"]
+    period: "Settembre",
+    tags: ["hacking", "cybersecurity", "privacy", "reti"]
   },
   {
     name: "Fiera dell'Elettronica e del Radioamatore (Montichiari)",
@@ -603,14 +603,146 @@ window.EVENTS = [
     tags: ["elettronica", "radioamatori", "microcontrollori", "hardware"]
   },
   {
-    name: "Italian Agile Days (IAD)",
-    url: "https://agileday.it/",
-    description: "Convegno nazionale sulle Metodologie Agili, Lean Software, Scrum ed Extreme Programming (XP).",
-    location: "Sede itinerante",
+    name: "Italian Agile Days",
+    url: "https://www.agileday.it/",
+    description: "Conferenza della community italiana sui metodi agili applicati a sviluppo software, prodotti e organizzazioni.",
+    location: "Sede italiana variabile",
     region: "Sede variabile",
-    regions: ["Lombardia", "Calabria"],
+    regions: ["Calabria", "Emilia-Romagna", "Lazio", "Lombardia", "Toscana"],
+    months: [11],
+    period: "Novembre",
+    tags: ["agile", "software development", "product management"]
+  },
+  {
+    name: "AI Forum",
+    url: "https://www.aiforum.eu/",
+    description: "Forum dedicato a ricerca, applicazioni, impatto e governance dell'intelligenza artificiale nel contesto italiano.",
+    location: "Milano (MI)",
+    region: "Lombardia",
+    months: [4],
+    period: "Aprile",
+    tags: ["AI", "machine learning", "data"]
+  },
+  {
+    name: "Better Software",
+    url: "https://www.bettersoftware.it/",
+    description: "Conferenza su progettazione, sviluppo e gestione di prodotti software, processi e organizzazioni tecniche.",
+    location: "Milano (MI)",
+    region: "Lombardia",
+    months: [12],
+    period: "Dicembre",
+    tags: ["software development", "product management", "agile"]
+  },
+  {
+    name: "Data Saturday Pordenone",
+    url: "https://datasaturdays.com/",
+    description: "Evento community gratuito su piattaforme dati, database, analytics, business intelligence e cloud data.",
+    location: "Pordenone (PN)",
+    region: "Friuli-Venezia Giulia",
+    months: [2],
+    period: "Febbraio",
+    tags: ["data", "database", "analytics", "cloud"]
+  },
+  {
+    name: "DevFest Campobasso",
+    url: "https://gdg.community.dev/gdg-campobasso/",
+    description: "Conferenza annuale della community Google Developer locale su programmazione, cloud, web, mobile e AI.",
+    location: "Campobasso (CB)",
+    region: "Molise",
+    months: [9, 10],
+    period: "Settembre-ottobre",
+    tags: ["software development", "Google Cloud", "mobile", "AI"]
+  },
+  {
+    name: "DevFest Catania",
+    url: "https://gdg.community.dev/gdg-catania/",
+    description: "Conferenza annuale della community Google Developer di Catania su sviluppo, cloud, mobile, web e AI.",
+    location: "Catania (CT)",
+    region: "Sicilia",
     months: [10, 11],
-    period: "Tra ottobre e novembre",
-    tags: ["agile", "lean", "scrum", "extreme programming"]
+    period: "Ottobre-novembre",
+    tags: ["software development", "Google Cloud", "mobile", "AI"]
+  },
+  {
+    name: "DevFest Pescara",
+    url: "https://gdg.community.dev/gdg-pescara/",
+    description: "Conferenza annuale della community Google Developer di Pescara su software, cloud, web, mobile e AI.",
+    location: "Pescara (PE)",
+    region: "Abruzzo",
+    months: [10, 11],
+    period: "Ottobre-novembre",
+    tags: ["software development", "Google Cloud", "mobile", "AI"]
+  },
+  {
+    name: "DevFest Pisa",
+    url: "https://gdg.community.dev/gdg-pisa/",
+    description: "Conferenza annuale della community Google Developer di Pisa su sviluppo software e tecnologie Google.",
+    location: "Pisa (PI)",
+    region: "Toscana",
+    months: [10, 11],
+    period: "Ottobre-novembre",
+    tags: ["software development", "Google Cloud", "web development", "AI"]
+  },
+  {
+    name: "DevFest Roma",
+    url: "https://gdg.community.dev/gdg-roma-citta/",
+    description: "Conferenza annuale della community Google Developer romana su sviluppo, cloud, mobile, web e AI.",
+    location: "Roma (RM)",
+    region: "Lazio",
+    months: [10, 11],
+    period: "Ottobre-novembre",
+    tags: ["software development", "Google Cloud", "mobile", "AI"]
+  },
+  {
+    name: "Milan Games Week & Cartoomics - Retrogaming",
+    url: "https://www.milangamesweek.it/",
+    description: "Area della manifestazione milanese dedicata anche a retrogaming, storia del videogioco e cultura digitale.",
+    location: "Rho (MI)",
+    region: "Lombardia",
+    months: [11],
+    period: "Novembre",
+    tags: ["retrogaming", "cultura digitale", "videogiochi"]
+  },
+  {
+    name: "OWASP Italy Day",
+    url: "https://owasp.org/www-chapter-italy/",
+    description: "Conferenza della comunità OWASP italiana su sicurezza applicativa, DevSecOps e sviluppo software sicuro.",
+    location: "Sede italiana variabile",
+    region: "Sede variabile",
+    regions: ["Lombardia", "Sardegna"],
+    months: [6],
+    period: "Giugno",
+    tags: ["application security", "OWASP", "DevSecOps"]
+  },
+  {
+    name: "Privacy Symposium",
+    url: "https://privacysymposium.org/",
+    description: "Conferenza internazionale su privacy, protezione dei dati, sicurezza, regolazione e tecnologie digitali.",
+    location: "Venezia (VE)",
+    region: "Veneto",
+    months: [4],
+    period: "Aprile",
+    tags: ["privacy", "cybersecurity", "data protection"]
+  },
+  {
+    name: "SoCraTes Italy",
+    url: "https://www.socrates-conference.it/",
+    description: "Unconference residenziale su software craftsmanship, progettazione, testing e pratiche di sviluppo.",
+    location: "Rimini (RN)",
+    region: "Emilia-Romagna",
+    months: [9],
+    period: "Settembre",
+    tags: ["software craftsmanship", "testing", "software development"]
+  },
+  {
+    name: "RetroCampus",
+    url: "https://retrocampus.com/",
+    description: "Incontro dell'associazione Retrocomputer Club Italia dedicato a retrocomputing, restauro e storia informatica.",
+    location: "Sede italiana variabile",
+    region: "Sede variabile",
+    regions: ["Emilia-Romagna", "Lombardia", "Toscana"],
+    months: [],
+    period: "Periodo variabile",
+    tags: ["retrocomputing", "storia informatica", "hardware"]
   }
 ];
