@@ -22,7 +22,27 @@ const allItalianRegions = [
 ];
 
 window.EVENTS = [
-  {
+ {
+    name: "Red Hot Cyber Conference",
+    url: "https://www.redhotcyber.com/red-hot-cyber-conference/",
+    description: "Evento annuale gratuito sulla cybersecurity creato dalla community di Red Hot Cyber per diffondere cultura, competenze e consapevolezza sui temi della sicurezza informatica e dell'innovazione digitale.",
+    location: "Roma (RM)",
+    region: "Lazio",
+    months: [4, 5, 11],
+    period: "Variabile (storicamente in novembre, aprile o maggio)",
+    tags: ["cybersecurity", "innovazione digitale", "hacker etico", "capture the flag", "intelligenza artificiale", "rischio informatico", "workshop"]
+ }, 
+ {
+    name: "Product Heroes Conference",
+    url: "https://www.productheroes.it/product-heroes-conference-2026/",
+    description: "Evento annuale dedicato al product management in Italia, con focus su sviluppo di prodotti digitali, strategie data-driven e AI.",
+    location: "Assago (MI)",
+    region: "Lombardia",
+    months: [10],
+    period: "Di solito in ottobre",
+    tags: ["product management", "digital products", "tech"]
+ },
+ {
     name: "SFScon",
     url: "https://www.sfscon.it/",
     description: "Conferenza internazionale sul software libero, l'open source e la sovranità digitale, attiva a Bolzano dal 2001.",
