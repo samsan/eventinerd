@@ -23,6 +23,16 @@ const allItalianRegions = [
 
 window.EVENTS = [
  {
+    name: "Mercatino di Marzaglia 2.0",
+    url: "https://www.marzaglia.it/",
+    description: "Storico mercatino e mostra scambio dedicato all'usato per radio, elettronica, componenti e strumentazione, attivo da oltre 30 anni.",
+    location: "Gonzaga (MN)",
+    region: "Lombardia",
+    months: [5, 9],
+    period: "Tipicamente il secondo sabato di maggio e di settembre",
+    tags: ["elettronica", "radio", "mostra scambio", "hardware", "mercatino"]
+ },
+ {
     name: "Red Hot Cyber Conference",
     url: "https://www.redhotcyber.com/red-hot-cyber-conference/",
     description: "Evento annuale gratuito sulla cybersecurity creato dalla community di Red Hot Cyber per diffondere cultura, competenze e consapevolezza sui temi della sicurezza informatica e dell'innovazione digitale.",
