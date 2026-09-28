@@ -68,7 +68,7 @@ window.EVENTS = [
     description: "Nodo locale stabile del Linux Day con talk e laboratori GNU/Linux organizzati dalla community triestina.",
     location: "Trieste (TS)",
     region: "Friuli-Venezia Giulia",
-    months: [9],
+    months: [10],
     period: "Quarto sabato di ottobre",
     tags: ["Linux", "open source", "community"]
   },
